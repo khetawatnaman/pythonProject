@@ -4,8 +4,8 @@ from django.shortcuts import render_to_response
 
 
 def login(request):
-    # return HttpResponse('<h1>hello/h1>')
     return render(request, 'index.html', context=None)
+
 
 def naman(request):
     return render(request, 'Naman.html', context=None)
