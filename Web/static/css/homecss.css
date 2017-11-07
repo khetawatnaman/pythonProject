@@ -85,16 +85,16 @@ img {
 }
 
 
-.img-circle {
+#img-circle {
     /*border-radius: 50%;*/
-    height: 40px;
+    height: 70px;
     display: inline-block;
-    margin: 15px;
+    margin-right: 0px;
     float: right;
-    width: auto;
+    width: 80px;
 }
 
-.img-circle img{
+#img-circle img{
   border-radius: 50%;
   vertical-align: middle;
 }

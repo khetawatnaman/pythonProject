@@ -1,9 +1,19 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.shortcuts import render_to_response
 
-
-# Create your views here.
 
 def login(request):
+    # return HttpResponse('<h1>hello/h1>')
+    return render(request, 'index.html', context=None)
 
-    return HttpResponse("<h1>hello</h1>")
+def naman(request):
+    return render(request, 'Naman.html', context=None)
+
+
+def hitesh(request):
+    return render(request, 'Hitesh.html', context=None)
+
+
+def nishit(request):
+    return render(request, 'Nishit.html', context=None)

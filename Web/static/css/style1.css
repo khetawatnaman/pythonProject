@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  margin-right: 50px;
   box-sizing: border-box;
   -webkit-user-select:none;
      -moz-user-select:none;
@@ -12,7 +11,7 @@
 }
 
 body {
-  background: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-212475.jpg");
+  background: url("https://www.walldevil.com/wallpapers/a92/simple-wallpaper-desktop-light-wallpapers.jpg");
   font: 100%/1 'Lobster', cursive;
 }
 
@@ -23,7 +22,6 @@ body {
   width: 160px;
   height:50px;
   padding-top: 10px;
-  margin-top: 70px;
     border: 0px solid #178bb6;
     border-radius: 8px;
     background: #3AA3E4;
@@ -45,7 +43,7 @@ body {
     content:  "\0000a0";
     display: inline-block;
     height: 50px;
-    width: 45px;
+    width: 60px;
     line-height: 24px;
     margin: 0 4px -6px -4px;
     position: relative;
