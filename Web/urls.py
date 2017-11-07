@@ -9,7 +9,6 @@ urlpatterns = [
     url(r'nishit', views.nishit, name='nishit'),
     # url(r'naman', views.naman, name='naman'),
     # url(r'naman', views.naman, name='naman'),
-    # url(r'naman', views.naman, name='naman'),
-    # url(r'naman', views.naman, name='naman'),
+   
 
 ]
