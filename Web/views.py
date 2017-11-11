@@ -36,7 +36,10 @@ def channel(request):
     return render(request, 'channel.html', context=None)
 
 def home(request):
-    return render(request, 'home.html', context=None)
+    context = {
+        'n': range(10),
+    }
+    return render(request, 'home.html', context)
 
 def videoviewing(request):
     return render(request, 'Video Viewing.html', context=None)

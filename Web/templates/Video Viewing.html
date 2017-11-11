@@ -18,50 +18,99 @@
 $(document).ready(function() {
 	$('video').videoPlayer({
 		'playerWidth' : 1,
-		'videoClass' : 'video'	
+		'videoClass' : 'video'
 	});
 });
 
 </script>
 
-	
-	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<link rel="stylesheet" type="text/css" href="static/css/videoviewing.css">
 	<style>
 .f1{
-  background: #FFFFFF;
+  background: #E0E0E0;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
-  max-width: 600px;
   margin-left: 50px;
   margin-right: 20px;
-  float:left;	
+  float:left;
   width: 800px;
   height: 100%;
 }
 .f2{
-  background: #FFFFFF;
-  padding-left: 0px;
+  background: #E0E0E0;
+  padding-left: 50px;
   padding-right: 40px;
   padding-bottom: 40px;
   height: 450px;
-  max-width: 600px;
   margin-left: 30px;
   margin-right: 20px;
-  float:right;	
+  float:right;
   height: 100%;
   width: 400px;
 }
+.i1{
+  background: #E0E0E0;
+  float: left;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+}
+.i2{
+  background: #E0E0E0;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+
+.fa {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa.fa-thumbs-up:hover {
+  color: darkblue;
+}
+.fa.fa-thumbs-down:hover {
+  color: red;
+}
+
+.like{
+float:left;
+font-size:20px;
+padding-left:30px;
+padding-right:30px;
+}
+.dislike{
+float:right;
+font-size:20px;
+padding-left:30px;
+padding-right:30px;
+}
+.likeordislike{
+float:right;
+padding-left:30px;
+padding-right:30px;
+}
+.views{
+float:left;
+padding-right:30px;
+}
+
+
 	</style>
 </head>
 
 <body background-color="#FEFEFE">
 	<div class="banner">
-	
+
 <div style="float:left;">
-    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+
+  <button class="w3-button w3-xxlarge" onclick="w3_open()" >&#9776;</button>
+
 	</div>
 
 	      <div class="logo"><img src="static/images/sb.png"></div>
@@ -79,12 +128,16 @@ $(document).ready(function() {
 	      <div class="img-circle"><img src="static/images/profile.png"></div>
 </div>
 
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div class="w3-sidebar w3-bar-block left" style="display:none;z-index:5" id="mySidebar">
+
+
+
 	<div class="banner">
 	<div style="float:left;">
- <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 <div>
-  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <button class="w3-button w3-xxlarge" onclick="w3_close()">&#9776;</button>
 	</div>
 	</div>
 
@@ -103,7 +156,8 @@ $(document).ready(function() {
 	      <div class="img-circle"><img src="static/images/profile.png"></div>
 	</div>
 
-	
+
+
 	<div class="menu">
 		<ul>
 	  		<li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
@@ -124,7 +178,8 @@ $(document).ready(function() {
 		</ul>
 	</div>
     </div>
-	<div class="container" id="main">
+	<div class="container">
+	<div id="main">
 	    <div id="f1" class="f1">
 		<video width="800px" height="400px">
 		<source src="static/videos/movie.mp4" type="video/mp4">
@@ -133,6 +188,21 @@ $(document).ready(function() {
 		<h4 align="left">Title </h4>
 		<h4 align="left">Duration </h4>
 		<h4 align="left">Description </h4>
+           <div class="views">
+                 <h4>Views </h4>
+           </div>
+           <div class="likeordislike">
+
+<div class="like">
+<i id = "like" class="fa fa-thumbs-up"></i>
+15
+</div>
+<div class="dislike">
+<i id = "dislike" class="fa fa-thumbs-down"></i>
+10
+</div>
+</div>
+
         </div>
 		<div id="f2" class="f2">
 		<h4 align="left">Related Videos </h4>
@@ -178,18 +248,77 @@ $(document).ready(function() {
                     Views
                 </h6>
             </div>
+             <div class="i1">
+                <img src="static/images/minar.jpg" width="100" height="100" align="left">
+            </div>
+            <div class="i2">
+                <h6>
+                    Title
+                </h6>
+                <h6>
+                    Channel
+                </h6>
+                <h6>
+                    Views
+                </h6>
+            </div>
+             <div class="i1">
+                <img src="static/images/minar.jpg" width="100" height="100" align="left">
+            </div>
+            <div class="i2">
+                <h6>
+                    Title
+                </h6>
+                <h6>
+                    Channel
+                </h6>
+                <h6>
+                    Views
+                </h6>
+            </div>
+             <div class="i1">
+                <img src="static/images/minar.jpg" width="100" height="100" align="left">
+            </div>
+            <div class="i2">
+                <h6>
+                    Title
+                </h6>
+                <h6>
+                    Channel
+                </h6>
+                <h6>
+                    Views
+                </h6>
+            </div>
         </div>
 	</div>
-    
+    </div>
     <script>
 function w3_open() {
-    document.getElementById("myOverlay").style.display = "block";
-    document.getElementById("mySidebar").style.display = "block";
+
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("myOverlay").style.display = "block";
 }
 function w3_close() {
+
+	document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
-    document.getElementById("mySidebar").style.display = "none";
 }
+
+var count=1;
+function setcolor(btn){
+    var property = document.getElementById(btn);
+    if (count == 0){
+        property.style.backgroundColor = "#FFFFFF"
+        count=1;
+    }
+    else{
+        property.style.backgroundColor = "#7FFF00"
+        count=0;
+    }
+
+}
+
 </script>
 </body>
 </html>
