@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import render_to_response
+from .models import Video,User
 
 def login(request):
     return render(request, 'index.html', context=None)
@@ -35,6 +36,9 @@ def shivani(request):
 def channel(request):
     return render(request, 'channel.html', context=None)
 
+def search(request):
+    return render(request, 'Search Results.html', context=None)
+
 def home(request):
     context = {
         'n': range(10),
@@ -42,7 +46,12 @@ def home(request):
     return render(request, 'home.html', context)
 
 def videoviewing(request):
-    return render(request, 'Video Viewing.html', context=None)
+    a = ""
+    if request.method=="POST":
+        a=request.POST['query']
+        #a= Video.objects.filter(title=title)[8]
+    n = range(10)
+    return render(request, 'Video Viewing.html', {'a':a,'n':n})
 
 def about(request):
     return None

@@ -49,14 +49,14 @@
   background-color: #FFFFFF;
   height: 100%;
   width: 85%;
+  /*margin-bottom: 30px;*/
   display: inline-block;
   float: right;
   right: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
   position: inherit;
   text-align: center;
   top: 70px;
-  padding-right: 10px;
 }
 
 
@@ -155,8 +155,15 @@ img {
   margin: 10px;
   overflow-y:hidden;
   white-space: nowrap;
-  padding-bottom: 70px;
 }
+
+
+.xtra{
+  height: 50px;
+  margin: 10px;
+  width: 100%;
+}
+
 
 .genre .item{
   width: 130px;
@@ -178,6 +185,7 @@ img {
   margin-bottom: 10px;
   display: inline-block;
 }
+
 
 .item img{
   width: 130px;

@@ -1,10 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+from django.template import Library
+register = Library()
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<title>Stream Beats</title>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kalam|Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="static/css/search.css">
 </head>
-<body>
+
+
+<body background-color="#FEFEFE">
+	<div class="banner">
+
+
+<div style="float:left;">
+  <button class="w3-button w3-xxlarge" onclick="w3_open()" >&#9776;</button>
+	</div>
+
+	      <div class="logo"><img src="static/images/sb.png"></div>
+	      <!-- <div class="search"><img src="images/search.png"></div> -->
+	      <div class="wrap">
+   			<div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+
+      <button type="submit" class="searchButton">
+        <!-- <i class="fa fa-search"></i> -->
+        <a href="#searchResults"><i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i></a>
+     </button>
+   </div>
+</div>
+	      <div class="welcome"><h3>Welcome Frank</h3></div>
+	      <div class="img-circle"><img src="static/images/profile.png"></div>
+</div>
+
+
+
+	<div class="w3-sidebar w3-bar-block left" style="display:visible;z-index:5" id="mySidebar">
+
+
+	<div class="banner">
+	<div style="float:left;">
+  <button class="w3-button w3-xxlarge" onclick="w3_close()" >&#9776;</button>
+	</div>
+
+	      <div class="logo"><img src="static/images/sb.png"></div>
+	      <!-- <div class="search"><img src="images/search.png"></div> -->
+	      <div class="wrap">
+   			<div class="search">
+      <input type="text" class="searchTerm">
+      <button type="submit" class="searchButton">
+        <!-- <i class="fa fa-search"></i> -->
+        <i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i>
+     </button>
+   </div>
+</div>
+	      <div class="welcome" style="text-align:right"><h3>Welcome Frank</h3></div>
+	      <div class="img-circle"><img src="static/images/profile.png"></div>
+	</div>
+
+
+	<div class="menu">
+
+		<ul>
+	  		<li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
+	 		<li><a href="#mychannel" class="w3-bar-item w3-button">My Channel</a></li>
+	  		<li><a href="#liked" class="w3-bar-item w3-button">Liked</a></li>
+		</ul>
+		<hr class="ab">
+		<ul>
+	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
+	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Punjabi</a></li>
+	  		<li><a href="#admin" class="w3-bar-item w3-button">Admin's Playlist</a></li>
+	  		<li><a href="http://127.0.0.1:8000" class="w3-bar-item w3-button">Logout</a></li>
+		</ul>
+	</div>
+	</div>
+
+
+
+
+	<div class="container" style="overflow-y:auto">
+        <div id="main">
+	<div class="home">
+ 			<div class="sr">Search Results</div>
+        </div>
+	</div>
+	<div>
+        <div class="searchresults">
+
+            <div class="row">
+            <div class="video"><img src="static/images/shapeofu.jpg"></div>
+            <div class="descr">
+            <p id="sname">Shape Of You</p>
+            <p id="aname">Ed Sheeran</p>
+            </div>
+        </div>
+
+                    <div class="row">
+            <div class="video"><img src="static/images/shapeofu.jpg"></div>
+            <div class="descr">
+            <p id="sname">Shape Of You</p>
+            <p id="aname">Ed Sheeran</p>
+            </div>
+        </div>
+
+                    <div class="row">
+            <div class="video"><img src="static/images/shapeofu.jpg"></div>
+            <div class="descr">
+            <p id="sname">Shape Of You</p>
+            <p id="aname">Ed Sheeran</p>
+            </div>
+        </div>
+        </div>
+
+<!-- 		<div class="videoshere">
+<div class="grid-container" style="overflow-y:auto">
+    <div class="row1">
+        <div class="col-1">
+        	<div class="video"><img src="images/shapeofu.jpg"></div>
+        	<p id="sname">Shape Of You</p>
+        	<p id="aname">Ed Sheeran</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/shapeofu.jpg"></div>
+        	<p id="sname">Shape Of You</p>
+        	<p id="aname">Ed Sheeran</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/shapeofu.jpg"></div>
+        	<p id="sname">Shape Of You</p>
+        	<p id="aname">Ed Sheeran</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/shapeofu.jpg"></div>
+        	<p id="sname">Shape Of You</p>
+        	<p id="aname">Ed Sheeran</p>
+        </div>    </div>
+    <div class="row2">
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+            </div>
+
+                <div class="row3">
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+        <div class="col-1">
+        	<div class="video"><img src="images/image.jpg"></div>
+        	<p id="sname">Dusk Till Dawn</p>
+        	<p id="aname">Zayn</p>
+        </div>
+            </div>
+</div>
+</div> -->
+	</div>
+	</div>
+
+<script>
+function w3_open() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.width = "15%";
+    document.getElementById("mySidebar").style.display = "block";
+
+}
+function w3_close() {
+    document.getElementById("main").style.marginLeft = "-15%";
+    document.getElementById("mySidebar").style.display = "none";
+
+}
+</script>
+
 
 </body>
 </html>
