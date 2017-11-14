@@ -67,6 +67,7 @@
         <a href="#" onclick="signOut();">Sign out</a>
         <script>
 	function onSignIn(googleUser) {
+	  $(location).attr('href', '/home')
     var profile = googleUser.getBasicProfile();
     alert("You have successfully loged in "+profile.getEmail())
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
