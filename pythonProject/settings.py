@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'pythonProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'video_management',
+        'NAME': 'video_man',
         'USER': 'root',
         'PASSWORD': 'prashant',
         'HOST': '',

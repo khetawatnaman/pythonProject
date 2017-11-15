@@ -28,10 +28,12 @@
 <body>
 <div class="banner">
     <div class="logo"><img src="static/images/sb.png"/></div>
+     <div class="welcome1" style="float: right; margin-right: 20px;"><a href="/about" ><b><i><h3>About</h3></i></b></a></div>
+
 </div>
 
 <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px; margin-top:70px">
-    <a href="/abhya" class="w3-bar-item w3-button" id="img-circle" style="height: 60px; margin-top: 15px"><img
+    <a href="/abhya" class="w3-bar-item w3-button" id="img-circle" style=" margin-top: 15px"><img
             src="static/images/abhya.jpg"/></a>
     <a href="/agrima" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
             src="static/images/agrima.jpg"/></a>
@@ -44,13 +46,12 @@
     <a href="/piyush" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
             src="static/images/piyush.jpg"/></a>
     <a href="/praman" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
-            src="static/images/naman.JPG"/></a>
+            src="static/images/praman.JPG"/></a>
     <a href="/prashant" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
             src="static/images/prashant.jpg"/></a>
     <a href="/shivani" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
             src="static/images/shivani.jpg"/></a>
-    <a href="/about" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
-            src="static/images/sb3.png"/></a>
+
 
 </div>
 
@@ -62,18 +63,17 @@
         <span class="loader"></span>
 
     </header>
-    <form class="form">
-        <div  class="g-signin2" data-onsuccess="onSignIn"></div>
-        <a href="#" onclick="signOut();">Sign out</a>
-        <script>
+    <form class="form" style=" background-color: #dae2e8;  display: inline-block;">
+        <div style="margin-top: 85px;" href="/home" class="g-signin2" data-onsuccess="onSignIn"></div>
+          <script>
 	function onSignIn(googleUser) {
-	  $(location).attr('href', '/home')
-    var profile = googleUser.getBasicProfile();
-    alert("You have successfully loged in "+profile.getEmail())
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
+  var profile = googleUser.getBasicProfile();
+  $(location).attr('href', '/home')
+  alert("You have successfully logged in "+profile.getName())
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
 
    // This is null if the 'email' scope is not present.
 }
