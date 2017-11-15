@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9f17f462-95bd-422f-9e59-5efe9c92873a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/templates/index.html" afterPath="$PROJECT_DIR$/Web/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pythonProject/settings.py" afterPath="$PROJECT_DIR$/pythonProject/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/pythonProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#317#326#0" expanded="true" />
               </folding>
@@ -547,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510772533740</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="updated files">
+      <created>1510773481346</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1510773481346</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1006,7 +1012,7 @@
     <entry file="file://$PROJECT_DIR$/pythonProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#317#326#0" expanded="true" />
           </folding>
