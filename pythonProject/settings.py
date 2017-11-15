@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'pythonProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlit3',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'video_management',
         # 'USER': 'root',
         # 'PASSWORD': 'prashant',
