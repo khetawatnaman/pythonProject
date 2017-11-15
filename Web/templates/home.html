@@ -140,26 +140,34 @@ register = Library()
 	<div class="home">
 		<h2 id="trending">Trending</h2>
 		<div class="trending">
-		{% for i in image %}
-			<a href="#viewVideo"><div class="item">
+		{% for i,j,k in image %}
+			<a href="/videoviewing"><div class="item">
 				<img src={{i}}>
-				<div class ="item-name">{{i}}</div>
-				<div class ="item-album">Ed Sheeran</div>
+				<div class ="item-name">{{j}}</div>
+				<div class ="item-album">{{k}}</div>
 			</div></a>
 			{% endfor %}
 					</div>
 		<h2 id="genre">Genre</h2>
-		<a href="#viewVideo"><div class="genre">
-					{% for i in n %}
-			<div class="item"></div>
-
-			{% endfor %}
-		</div></a>
+		<div class="genre">
+            {% for i,j,k in image %}
+            <a href="#viewVideo">
+			<div class="item">
+                <img src={{i}}>
+				<div class ="item-name">{{j}}</div>
+				<div class ="item-album">{{k}}</div>
+            </div>
+            </a>
+            </div>
+        {% endfor %}
 		<h2 id="new">New Uploads</h2>
 		<div class="new">
-					{% for i in n %}
-			<a href="#viewVideo"><div class="item"></div></a>
-
+					{% for i,j,k in image %}
+			<a href="#viewVideo"><div class="item">
+                <img src={{i}}>
+				<div class ="item-name">{{j}}</div>
+				<div class ="item-album">{{k}}</div>
+                </div></a>
 			{% endfor %}
 		</div>
 	</div>
