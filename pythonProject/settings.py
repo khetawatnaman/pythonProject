@@ -24,7 +24,6 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", 'mah=u^%*8-kod#g9nq2@ub!un3s&y+r8+cp
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", False)
-# DEBUG = os.getenv("DEBUG", True)
 
 ALLOWED_HOSTS = ['*']
 
@@ -128,14 +127,10 @@ USE_TZ = True
 
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'Web/static'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'Web/static'),
+)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
