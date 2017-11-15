@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="wzLlvybfrxw9Sz8UxL-oAn9AolZO7n1iuPhnpvWhNcE"/>
+    <meta name="google-signin-client_id"
+          content="279373072452-gk8l93aledkhuld1pq0pia8p8ubscljr.apps.googleusercontent.com">
+    <title>StreamBeats Login</title>
+    <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homecss.css' %}">
+
+    <style>
+    #fdfdgds a:hover,a:focus{
+    background-color: #3AA3E4;
+}
+
+
+    </style>
+
+</head>
+<body>
+<div class="banner">
+    <div class="logo"><img src="{% static 'images/sb.png'  %}"/></div>
+     <div class="welcome1" style="float: right; margin-right: 20px;"><a href="/about" ><b><i><h3>About</h3></i></b></a></div>
+
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px; margin-top:70px">
+    <a href="/abhya" class="w3-bar-item w3-button" id="img-circle" style=" margin-top: 15px"><img
+            src="{% static 'images/abhya.jpg'  %}"/></a>
+    <a href="/agrima" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/agrima.jpg' %}"/></a>
+    <a href="/hitesh" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/hitesh.jpg'  %}"/></a>
+    <a href="/naman" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/naman.JPG'  %}"/></a>
+    <a href="/nishit" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/nishit.png'  %}"/></a>
+    <a href="/piyush" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/piyush.jpg'  %}"/></a>
+    <a href="/praman" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/praman.JPG'  %}"/></a>
+    <a href="/prashant" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/prashant.jpg'  %}"/></a>
+    <a href="/shivani" class="w3-bar-item w3-button" id="img-circle" style="height: 60px"><img
+            src="{% static 'images/shivani.jpg' %}"/></a>
+
+
+</div>
+
+<div class="login">
+
+    <header class="header">
+
+        <span class="text">Login</span>
+        <span class="loader"></span>
+
+    </header>
+    <form class="form" style=" background-color: #dae2e8;  display: inline-block;">
+        <div style="margin-top: 85px;" href="/home" class="g-signin2" data-onsuccess="onSignIn"></div>
+          <script>
+	function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  <!--$(location).attr('href', '/home')-->
+  alert("You have successfully logged in "+profile.getName())
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+
+   // This is null if the 'email' scope is not present.
+}
+  	function signOut() {
+    	var auth2 = gapi.auth2.getAuthInstance();
+    		auth2.signOut().then(function () {
+      		console.log('User signed out.');
+    	});
+  	}
+
+        </script>
+
+    </form>
+</div>
+
+</body>
+</html>

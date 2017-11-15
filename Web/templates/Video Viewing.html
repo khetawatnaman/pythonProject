@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+from django.template import Library
+register = Library()
+<html>
+
+<head>
+	<title>Stream Beats</title>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kalam|Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' type='text/css' href='static/css/style2.css' />
+    <style type="text/css">
+
+	</style>
+	<script src='static/js/jquery.js'></script>
+	<script src='static/js/javascript.js'></script>
+	<script type='text/javascript'>
+
+$(document).ready(function() {
+	$('video').videoPlayer({
+		'playerWidth' : 1,
+		'videoClass' : 'video'
+	});
+});
+
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/css/videoviewing.css">
+	<style>
+.f1{
+  background: #E0E0E0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  margin-left: 50px;
+  margin-right: 20px;
+  float:left;
+  width: 800px;
+  height: 100%;
+}
+.f2{
+  background: #E0E0E0;
+  padding-left: 50px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  height: 450px;
+  margin-left: 30px;
+  margin-right: 20px;
+  float:right;
+  height: 100%;
+  width: 400px;
+}
+.i1{
+  background: #E0E0E0;
+  float: left;
+  top: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+}
+.i2{
+  top: 10px;
+  background: #E0E0E0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+
+.fa {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    background: #E0E0E0;
+}
+.fa.fa-thumbs-up{
+background: #E0E0E0;
+}
+
+
+.fa.fa-thumbs-up:hover {
+  color: darkblue;
+  background: #E0E0E0;
+}
+.fa.fa-thumbs-down:hover {
+  color: red;
+}
+
+.like{
+float:left;
+font-size:20px;
+padding-left:30px;
+padding-right:30px;
+background: #E0E0E0;
+}
+.dislike{
+float:right;
+font-size:20px;
+padding-left:30px;
+padding-right:30px;
+}
+.likeordislike{
+float:right;
+padding-left:30px;
+padding-right:30px;
+}
+.views{
+float:left;
+padding-right:30px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
+	</style>
+</head>
+
+<body background-color="#FEFEFE">
+<div class="banner">
+<div style="float:left;">
+  <button class="w3-button w3-xxlarge" onclick="w3_open()" >&#9776;</button>
+	</div>
+	      <div class="logo"><img src="static/images/sb.png"></div>
+	      <!-- <div class="search"><img src="images/search.png"></div> -->
+	      <div class="wrap">
+          <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <!-- <i class="fa fa-search"></i> -->
+        <i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i>
+     </button>
+   </div>
+</div>
+	      <div class="welcome"><h3>Welcome Frank</h3></div>
+	      <div class="img-circle">
+              <li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+    <img src="static/images/profile.png" height="40px" width="40px" alt="user" class="profile-pic">
+</a>
+  <div class="dropdown-content">
+    <a href="#">Name</a>
+    <a href="#">Logout</a>
+  </div>
+</li>
+          </div>
+
+</div>
+
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div class="w3-sidebar w3-bar-block left" style="display:none;z-index:5" id="mySidebar">
+
+    <div class="banner">
+	<div style="float:left;">
+
+<div>
+  <button class="w3-button w3-xxlarge" onclick="w3_close()">&#9776;</button>
+	</div>
+	</div>
+
+	      <div class="logo"><img src="static/images/sb.png"></div>
+	      <!-- <div class="search"><img src="images/search.png"></div> -->
+	      <div class="wrap">
+              <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <!-- <i class="fa fa-search"></i> -->
+        <i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i>
+     </button>
+   </div>
+</div>
+	      <div class="welcome"><h3>Welcome Frank</h3></div>
+	      <div class="img-circle">
+
+          <li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+						<img src="static/images/profile.png" height="40px" width="40px" alt="user" class="profile-pic">
+						</a>
+  <div class="dropdown-content">
+    <a href="">Name</a>
+    <a href="">Logout</a>
+  </div>
+</li>
+
+          </div>
+	</div>
+
+
+
+	<div class="menu">
+		<ul>
+	  		<li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
+	 		<li><a href="" class="w3-bar-item w3-button" onclick="change()">My Channel</a></li>
+	  		<li><a href="#liked" class="w3-bar-item w3-button">Liked</a></li>
+		</ul>
+		<hr class="ab">
+		<ul>
+	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
+	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Punjabi</a></li>
+	  		<li><a href="#admin" class="w3-bar-item w3-button">Admin's Playlist</a></li>
+	  		<li><a href="\" class="w3-bar-item w3-button">Logout</a></li>
+		</ul>
+	</div>
+    </div>
+	<div class="container">
+	<div id="main">
+	    <div id="f1" class="f1">
+		<video id = "v1" width="800px" height="400px">
+		<source src={{a}} type="video/mp4">
+		<!--<source src="2.webm" type="video/webm">-->
+	    </video>
+		<h4 align="left">Title </h4>
+		<h4 align="left">Duration </h4>
+		<h4 align="left">Description </h4>
+           <div class="views">
+           <h4>Views </h4>
+           </div>
+           <div class="likeordislike">
+<div class="like">
+<i id = "like" class="fa fa-thumbs-up" type = "button" onclick="likecount()"></i>
+    <p id = "count_like">
+        15
+    </p>
+</div>
+<div class="dislike">
+<i id = "dislike" class="fa fa-thumbs-down" type = "button" onclick="dislikecount()"></i>
+<p id = "count_dislike">
+        15
+    </p>
+</div>
+</div>
+
+        </div>
+		<div id="f2" class="f2">
+		<h4 align="left">Related Videos </h4>
+            {% for i in n %}
+            <div class="i1">
+                <button id="close-image" type="submit"><a href="/videoviewing">
+                    <img id = "ab" src="static/images/minar.jpg" width="80" height="100">
+                </a>
+                </button>
+            </div>
+            <div class="i2">
+                <h6 id="query" name="query" type="text">
+                    Title
+                </h6>
+                <h6>
+                    Channel
+                </h6>
+                <h6>
+                    Views
+                </h6>
+            </div>
+            {% endfor %}
+        </div>
+	</div>
+    </div>
+    <script type="text/javascript">
+function w3_open() {
+
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+	document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+var like_state=0;
+var dislike_state=0;
+function likecount() {
+    if(like_state==0&&dislike_state==0){
+	var count = document.getElementById("count_like").innerHTML;
+	var a = parseInt(count,10);
+	a+=1;
+	document.getElementById("count_like").innerHTML=a;
+	like_state=1;
+    }
+    else if(like_state==1&&dislike_state==0){
+	var count = document.getElementById("count_like").innerHTML;
+	var a = parseInt(count,10);
+	a-=1;
+	document.getElementById("count_like").innerHTML=a;
+	like_state=0;
+    }
+    else if(like_state==0&&dislike_state==1){
+	var count = document.getElementById("count_dislike").innerHTML;
+	var a = parseInt(count,10);
+	a-=1;
+	document.getElementById("count_dislike").innerHTML=a;
+	dislike_state=0;
+	var count = document.getElementById("count_like").innerHTML;
+	var a = parseInt(count,10);
+	a+=1;
+	document.getElementById("count_like").innerHTML=a;
+	like_state=1;
+    }
+}
+function dislikecount() {
+    if(like_state==0&&dislike_state==0){
+	var count = document.getElementById("count_dislike").innerHTML;
+	var a = parseInt(count,10);
+	a+=1;
+	document.getElementById("count_dislike").innerHTML=a;
+	dislike_state=1;
+    }
+    else if(like_state==0&&dislike_state==1){
+	var count = document.getElementById("count_dislike").innerHTML;
+	var a = parseInt(count,10);
+	a-=1;
+	document.getElementById("count_dislike").innerHTML=a;
+	dislike_state=0;
+    }
+    else if(like_state==1&&dislike_state==0){
+	var count = document.getElementById("count_like").innerHTML;
+	var a = parseInt(count,10);
+	a-=1;
+	document.getElementById("count_like").innerHTML=a;
+	like_state=0;
+	var count = document.getElementById("count_dislike").innerHTML;
+	var a = parseInt(count,10);
+	a+=1;
+	document.getElementById("count_dislike").innerHTML=a;
+	dislike_state=1;
+    }
+}
+function change(){
+var b = "{{ a }}";
+var vi=document.getElementById("v1");
+vi.src=b;
+vi.load();
+vi.play();
+}
+function change1(){
+var b = "{{ a }}";
+var vi=document.getElementById("ab");
+vi.src=static/images/prashant.jpg;
+}
+
+function postdata(){
+var dataString = document.getElementById("query").innerHTML;
+$.ajax({
+type: "post",
+url: "/videoviewing",
+data: dataString,
+success: function(data){
+$("#"+type).html(data);
+}
+});
+}
+
+</script>
+</body>
+</html>
