@@ -18,6 +18,7 @@ class Video(models.Model):
     image_url = models.TextField(default="null")
     created_at = models.DateTimeField(default=datetime.now, blank=True)
     duration=models.TextField(default="02:30")
+
     class Meta:
         db_table = "video"
 
@@ -26,8 +27,8 @@ class Video(models.Model):
 
 
 class User(models.Model):
-    id=models.AutoField(primary_key=True)
-    video=models.ForeignKey(Video,default=1)
+    id = models.AutoField(primary_key=True)
+    video = models.ForeignKey(Video,default=1)
     first = models.CharField(max_length=200)
     last = models.CharField(max_length=200)
     picture = models.TextField()

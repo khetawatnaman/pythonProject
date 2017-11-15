@@ -51,6 +51,7 @@
   left: 0;
   top: 0;
   text-align: center;
+
 }
 
 img {
@@ -107,7 +108,13 @@ img {
   font-family: 'Kalam', cursive;
   color: #ffffff;
 }
-
+.welcome1{
+  display: inline-block;
+  padding-left: 50px;
+  text-align: right;
+  font-family: 'Kalam', cursive;
+  color: #ffffff;
+}
 
 .trending{
   height: 200px;

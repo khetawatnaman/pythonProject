@@ -113,19 +113,57 @@ float:left;
 padding-right:30px;
 }
 
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
 
 	</style>
 </head>
 
 <body background-color="#FEFEFE">
-	<div class="banner">
-
+<div class="banner">
 <div style="float:left;">
-
   <button class="w3-button w3-xxlarge" onclick="w3_open()" >&#9776;</button>
-
 	</div>
-
 	      <div class="logo"><img src="static/images/sb.png"></div>
 	      <!-- <div class="search"><img src="images/search.png"></div> -->
 	      <div class="wrap">
@@ -138,15 +176,24 @@ padding-right:30px;
    </div>
 </div>
 	      <div class="welcome"><h3>Welcome Frank</h3></div>
-	      <div class="img-circle"><img src="static/images/profile.png"></div>
+	      <div class="img-circle">
+              <li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+    <img src="static/images/profile.png" height="40px" width="40px" alt="user" class="profile-pic">
+</a>
+  <div class="dropdown-content">
+    <a href="#">Name</a>
+    <a href="#">Logout</a>
+  </div>
+</li>
+          </div>
+
 </div>
 
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 <div class="w3-sidebar w3-bar-block left" style="display:none;z-index:5" id="mySidebar">
 
-
-
-	<div class="banner">
+    <div class="banner">
 	<div style="float:left;">
 
 <div>
@@ -166,7 +213,19 @@ padding-right:30px;
    </div>
 </div>
 	      <div class="welcome"><h3>Welcome Frank</h3></div>
-	      <div class="img-circle"><img src="static/images/profile.png"></div>
+	      <div class="img-circle">
+
+          <li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+						<img src="static/images/profile.png" height="40px" width="40px" alt="user" class="profile-pic">
+						</a>
+  <div class="dropdown-content">
+    <a href="">Name</a>
+    <a href="">Logout</a>
+  </div>
+</li>
+
+          </div>
 	</div>
 
 
@@ -174,7 +233,7 @@ padding-right:30px;
 	<div class="menu">
 		<ul>
 	  		<li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
-	 		<li><a href="" class="w3-bar-item w3-button" onclick="">My Channel</a></li>
+	 		<li><a href="" class="w3-bar-item w3-button" onclick="change()">My Channel</a></li>
 	  		<li><a href="#liked" class="w3-bar-item w3-button">Liked</a></li>
 		</ul>
 		<hr class="ab">
@@ -219,13 +278,13 @@ padding-right:30px;
 		<h4 align="left">Related Videos </h4>
             {% for i in n %}
             <div class="i1">
-                <button id="close-image"><a href="/home">
+                <button id="close-image" type="submit"><a href="/videoviewing">
                     <img id = "ab" src="static/images/minar.jpg" width="80" height="100">
                 </a>
                 </button>
             </div>
             <div class="i2">
-                <h6>
+                <h6 id="query" name="query" type="text">
                     Title
                 </h6>
                 <h6>
@@ -319,6 +378,19 @@ var b = "{{ a }}";
 var vi=document.getElementById("ab");
 vi.src=static/images/prashant.jpg;
 }
+
+function postdata(){
+var dataString = document.getElementById("query").innerHTML;
+$.ajax({
+type: "post",
+url: "/videoviewing",
+data: dataString,
+success: function(data){
+$("#"+type).html(data);
+}
+});
+}
+
 </script>
 </body>
 </html>
