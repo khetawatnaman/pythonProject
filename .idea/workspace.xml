@@ -6,6 +6,68 @@
   <component name="ChangeListManager">
     <list default="true" id="9f17f462-95bd-422f-9e59-5efe9c92873a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/templates/index.html" afterPath="$PROJECT_DIR$/Web/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pythonProject/settings.py" afterPath="$PROJECT_DIR$/pythonProject/settings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/Web/static/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/channel.css" afterPath="$PROJECT_DIR$/Web/static/channel.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/cm-overlay.css" afterPath="$PROJECT_DIR$/Web/static/cm-overlay.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/font-awesome.css" afterPath="$PROJECT_DIR$/Web/static/font-awesome.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/home.css" afterPath="$PROJECT_DIR$/Web/static/home.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/homecss.css" afterPath="$PROJECT_DIR$/Web/static/homecss.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/main.css" afterPath="$PROJECT_DIR$/Web/static/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/owl.carousel.css" afterPath="$PROJECT_DIR$/Web/static/owl.carousel.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/owl.theme.css" afterPath="$PROJECT_DIR$/Web/static/owl.theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/search.css" afterPath="$PROJECT_DIR$/Web/static/search.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/style.css" afterPath="$PROJECT_DIR$/Web/static/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/style1.css" afterPath="$PROJECT_DIR$/Web/static/style1.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/style2.css" afterPath="$PROJECT_DIR$/Web/static/style2.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/css/videoviewing.css" afterPath="$PROJECT_DIR$/Web/static/videoviewing.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/Web/static/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/Web/static/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/Web/static/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/Web/static/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/Web/static/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/Web/static/fontawesome-webfont.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/3.jpg" afterPath="$PROJECT_DIR$/Web/static/3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/6.jpg" afterPath="$PROJECT_DIR$/Web/static/6.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/abhya.jpg" afterPath="$PROJECT_DIR$/Web/static/abhya.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/agrima.jpg" afterPath="$PROJECT_DIR$/Web/static/agrima.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/cancel.png" afterPath="$PROJECT_DIR$/Web/static/cancel.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/guitar.jpg" afterPath="$PROJECT_DIR$/Web/static/guitar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/hitesh.jpg" afterPath="$PROJECT_DIR$/Web/static/hitesh.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/image.jpg" afterPath="$PROJECT_DIR$/Web/static/image.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/minar.jpg" afterPath="$PROJECT_DIR$/Web/static/minar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/naman-background.jpeg" afterPath="$PROJECT_DIR$/Web/static/naman-background.jpeg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/naman.JPG" afterPath="$PROJECT_DIR$/Web/static/naman.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/nishit.png" afterPath="$PROJECT_DIR$/Web/static/nishit.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/piyush.jpg" afterPath="$PROJECT_DIR$/Web/static/piyush.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/play.jpg" afterPath="$PROJECT_DIR$/Web/static/play.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/playv.PNG" afterPath="$PROJECT_DIR$/Web/static/playv.PNG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/praman.jpg" afterPath="$PROJECT_DIR$/Web/static/praman.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/prashant.jpg" afterPath="$PROJECT_DIR$/Web/static/prashant.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/profile.png" afterPath="$PROJECT_DIR$/Web/static/profile.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/s2.jpg" afterPath="$PROJECT_DIR$/Web/static/s2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/sb.png" afterPath="$PROJECT_DIR$/Web/static/sb.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/sb3.png" afterPath="$PROJECT_DIR$/Web/static/sb3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/search.PNG" afterPath="$PROJECT_DIR$/Web/static/search.PNG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/shapeofu.jpg" afterPath="$PROJECT_DIR$/Web/static/shapeofu.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/shivani.jpg" afterPath="$PROJECT_DIR$/Web/static/shivani.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/images/sitar.jpg" afterPath="$PROJECT_DIR$/Web/static/sitar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/SmoothScroll.min.js" afterPath="$PROJECT_DIR$/Web/static/SmoothScroll.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/bars.js" afterPath="$PROJECT_DIR$/Web/static/bars.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/Web/static/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/jarallax.js" afterPath="$PROJECT_DIR$/Web/static/jarallax.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/javascript.js" afterPath="$PROJECT_DIR$/Web/static/javascript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/jquery-1.11.1.min.js" afterPath="$PROJECT_DIR$/Web/static/jquery-1.11.1.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/jquery.cm-overlay.js" afterPath="$PROJECT_DIR$/Web/static/jquery.cm-overlay.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/jquery.js" afterPath="$PROJECT_DIR$/Web/static/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/jquery.mobile.custom.min.js" afterPath="$PROJECT_DIR$/Web/static/jquery.mobile.custom.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/jquery.tools.min.js" afterPath="$PROJECT_DIR$/Web/static/jquery.tools.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/main.js" afterPath="$PROJECT_DIR$/Web/static/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/owl.carousel.js" afterPath="$PROJECT_DIR$/Web/static/owl.carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/js/responsiveslides.min.js" afterPath="$PROJECT_DIR$/Web/static/responsiveslides.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/videos/movie.mp4" afterPath="$PROJECT_DIR$/Web/static/movie.mp4" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Web/static/videos/movie.webm" afterPath="$PROJECT_DIR$/Web/static/movie.webm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pythonProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+            <state relative-caret-position="167">
+              <caret line="130" column="32" lean-forward="false" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
               <folding>
                 <element signature="e#317#326#0" expanded="true" />
               </folding>
@@ -69,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="284">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -133,10 +195,12 @@
       <find>jpg</find>
       <find>css</find>
       <find>static/</find>
+      <find>images/</find>
     </findStrings>
     <replaceStrings>
       <replace>jpg %}</replace>
       <replace>{% static</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -175,8 +239,8 @@
         <option value="$PROJECT_DIR$/Web/views.py" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/Web/templates/home.html" />
-        <option value="$PROJECT_DIR$/Web/templates/index.html" />
         <option value="$PROJECT_DIR$/pythonProject/settings.py" />
+        <option value="$PROJECT_DIR$/Web/templates/index.html" />
       </list>
     </option>
   </component>
@@ -290,6 +354,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\pythonProject\Web\static" />
       <recent name="C:\Users\Student\Desktop\pythonProject\Web\static\images" />
       <recent name="C:\Users\Student\Desktop\pythonProject\Web\templates" />
     </key>
@@ -566,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510773791445</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="updated files">
+      <created>1510774101526</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1510774101526</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -652,7 +724,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/static/css/videoviewing.css">
+    <entry file="file://$PROJECT_DIR$/Web/static/videoviewing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
@@ -681,7 +753,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/static/css/videoviewing.css">
+    <entry file="file://$PROJECT_DIR$/Web/static/videoviewing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
@@ -702,14 +774,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/static/css/videoviewing.css">
+    <entry file="file://$PROJECT_DIR$/Web/static/videoviewing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/static/css/style2.css">
+    <entry file="file://$PROJECT_DIR$/Web/static/style2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
@@ -807,7 +879,7 @@
     <entry file="file://$PROJECT_DIR$/Web/StramBeats.html" />
     <entry file="file://$PROJECT_DIR$/Web/Firebase.html" />
     <entry file="file://$PROJECT_DIR$/Web/templates/login.html" />
-    <entry file="file://$PROJECT_DIR$/Web/static/css/style2.css">
+    <entry file="file://$PROJECT_DIR$/Web/static/style2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
@@ -828,7 +900,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/static/css/home.css">
+    <entry file="file://$PROJECT_DIR$/Web/static/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="307" column="1" lean-forward="false" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
@@ -919,7 +991,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/static/css/videoviewing.css">
+    <entry file="file://$PROJECT_DIR$/Web/static/videoviewing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="95" column="10" lean-forward="false" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
@@ -1000,10 +1072,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pythonProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="130" column="32" lean-forward="false" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+          <folding>
+            <element signature="e#317#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="284">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1018,16 +1100,6 @@
             <element signature="n#style#0;n#a#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pythonProject/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding>
-            <element signature="e#317#326#0" expanded="true" />
           </folding>
         </state>
       </provider>
