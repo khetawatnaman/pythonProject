@@ -24,4 +24,3 @@ urllib3
 virtualenv
 virtualenv-clone
 psycopg2
-MySQL-python
