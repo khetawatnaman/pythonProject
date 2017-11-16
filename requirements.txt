@@ -1,5 +1,3 @@
-beautifulsoup4
-bs4
 certifi
 chardet
 dj-database-url
@@ -7,11 +5,8 @@ Django
 flake8
 gunicorn
 idna
-lxml
 mccabe
 mysqlclient
-nltk
-numpy
 pew
 pipenv
 psutil
@@ -19,7 +14,6 @@ pycodestyle
 pyflakes
 pytz
 requests
-six
 urllib3
 virtualenv
 virtualenv-clone
