@@ -66,12 +66,14 @@ register = Library()
 	      <!-- <div class="search"><img src="images/search.png"></div> -->
 	      <div class="wrap">
    			<div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <form action="/search" method="post">
+                    {% csrf_token %}
+      <input type="text" class="searchTerm" name="query" placeholder="What are you looking for?">
 
-      <button type="submit" class="searchButton">
-        <!-- <i class="fa fa-search"></i> -->
-        <a href="#searchResults"><i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i></a>
-     </button>
+                    <button type="submit" class="searchButton">
+                        <a href="/search"><i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i></a>
+                    </button>
+          </form>
    </div>
 </div>
 	      <div class="welcome"><h3>Welcome Frank</h3></div>
@@ -92,11 +94,14 @@ register = Library()
 	      <!-- <div class="search"><img src="images/search.png"></div> -->
 	      <div class="wrap">
    			<div class="search">
-      <input type="text" class="searchTerm">
-      <button type="submit" class="searchButton">
-        <!-- <i class="fa fa-search"></i> -->
-        <i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i>
-     </button>
+      <form action="/search" method="post">
+                    {% csrf_token %}
+      <input type="text" class="searchTerm" name="query" placeholder="What are you looking for?">
+
+                    <button type="submit" class="searchButton">
+                        <a href="/search"><i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i></a>
+                    </button>
+          </form>
    </div>
 </div>
 	      <div class="welcome" style="text-align:right"><h3>Welcome Frank</h3></div>
@@ -135,18 +140,25 @@ register = Library()
 
 
 
-	<div class="container" style="overflow-y:auto">
-        <!-- <div id="main"> -->
+
+        <div id="main">
 	<div class="home">
+        <br>
+        <br>
 		<h2 id="trending">Trending</h2>
 		<div class="trending">
 		{% for i,j,k in image %}
-
-			<a href="#viewVideo"><div class="item">
-				<img src={{i}}>
-				<div class ="item-name">{{j}}</div>
-				<div class ="item-album">{{k}}</div>
+                <a href="/videoviewing"><div class="item">
+                    <form action="/videoviewing" method="post">
+                        {% csrf_token %}
+                    <button type="submit">
+                        <img src={{i}}>
+                    </button>
+                <div class ="item-name">{{j}}</div>
+				<div class ="item-album">{{k}} Views</div>
+                  </form>
 			</div></a>
+
 			{% endfor %}
 					</div>
 		<h2 id="genre">Genre</h2>
@@ -164,13 +176,7 @@ register = Library()
 			{% endfor %}
 		</div>
 	</div>
-			<div class="xtra">
-				<p>
-
-				</p>
-	</div>
-        <!-- </div> -->
-	</div>
+        </div>
 
 <script>
 function w3_open() {

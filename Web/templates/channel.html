@@ -6,52 +6,163 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kalam|Roboto+Condensed" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="static/css/channel.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="static/css/channelcss.css">
+
+
+	<style>
+
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+</style>
 </head>
 
 <body background-color="#FEFEFE">
 	<div class="banner">
+	
+<div style="float:left;">
+  <button class="w3-button w3-xxlarge" onclick="w3_open()" >&#9776;</button>
+	</div>
+
 	      <div class="logo"><img src="static/images/sb.png"></div>
-	      <!-- <div class="search"><img src="static/images/search.png"></div> -->
+	      <!-- <div class="search"><img src="images/search.png"></div> -->
 	      <div class="wrap">
    			<div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
-        <!-- <i class="fa fa-search"></i> -->
-        <i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i>
-     </button>
+      <form action="/search" method="post">
+                    {% csrf_token %}
+      <input type="text" class="searchTerm" name="query" placeholder="What are you looking for?">
+
+                    <button type="submit" class="searchButton">
+                        <a href="/search"><i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i></a>
+                    </button>
+          </form>
    </div>
 </div>
 	      <div class="welcome"><h3>Welcome Frank</h3></div>
-	      <div class="img-circle"><img src="static/images/profile.png"></div>
-	</div>
-	<div class="container">
-	<div class="menu">
+	     	      <div class="img-circle">
+              <li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+    <img src="static/images/profile.png" height="40px" width="40px" alt="user" class="profile-pic">
+</a>
+  <div class="dropdown-content">
+    <a href="#">Name</a>
+    <a href="#">Logout</a>
+  </div>
+</li>
+          </div>
+</div>
 
-		<ul>
-	  		<li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
-	 		<li><a href="#mychannel" class="w3-bar-item w3-button">My Channel</a></li>
-	  		<li><a href="#liked" class="w3-bar-item w3-button">Liked</a></li>
-		</ul>
-		<hr class="ab">
-		<ul>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Punjabi</a></li>
-	  		<li><a href="#admin" class="w3-bar-item w3-button">Admin's Playlist</a></li>
-	  		<li><a href="#logout" class="w3-bar-item w3-button">Logout</a></li>
-		</ul>
+
+
+	<div class="w3-sidebar w3-bar-block left" style="display:visible;z-index:5" id="mySidebar">
+  	
+	
+	<div class="banner">
+	<div style="float:left;">
+  <button class="w3-button w3-xxlarge" onclick="w3_close()" >&#9776;</button>
 	</div>
-		<div class="home"  >
+
+	      <div class="logo"><img src="images/sb.png"></div>
+	      <!-- <div class="search"><img src="images/search.png"></div> -->
+	      <div class="wrap">
+   			<div class="search">
+      <form action="/search" method="post">
+                    {% csrf_token %}
+      <input type="text" class="searchTerm" name="query" placeholder="What are you looking for?">
+
+                    <button type="submit" class="searchButton">
+                        <a href="/search"><i class="fa fa-search" aria-hidden="true" style="color:#3AA3E4"></i></a>
+                    </button>
+          </form>
+   </div>
+</div>
+	      <div class="welcome"><h3>Welcome Frank</h3></div>
+	                     <div class="img-circle">
+              <li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+    <img src="static/images/profile.png" height="40px" width="40px" alt="user" class="profile-pic">
+</a>
+  <div class="dropdown-content">
+    <a href="#">Name</a>
+    <a href="#">Logout</a>
+  </div>
+</li>
+          </div>
+	</div>
+
+    <div class="menu">
+
+        <ul>
+            <li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
+            <li><a href="#mychannel" class="w3-bar-item w3-button">My Channel</a></li>
+            <li><a href="#liked" class="w3-bar-item w3-button">Liked</a></li>
+        </ul>
+        <hr class="ab">
+        <ul>
+            <li><a href="#bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
+            <li><a href="#bollywood" class="w3-bar-item w3-button">Punjabi</a></li>
+            <li><a href="#admin" class="w3-bar-item w3-button">Admin's Playlist</a></li>
+            <li><a href="\" class="w3-bar-item w3-button">Logout</a></li>
+        </ul>
+    </div>
+	</div>
+
+
+
+        
+
+        <div id="main">
+            <div class="home">
+		<div class="first">
 		<div class="circle-img"><img src="static/images/profile.png"></div>
 		<h1 id="name">Naruto</h1>
-		<button type="button" class="button">Upload</button>
+		<button onclick="location.href = '/upload';" type="button" class="button">Upload</button>
 		</div>
-		<div class="homed" >
-		<h1 id="name" style="padding:10px;">Description</h1>
+<!-- 		<div class="homed" >
+		<h1 id="name" style="padding:10px;">Description</h1><br>
 		<div class="homede" >
 		<p style="padding:10px"> Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, an adolescent ninja who searches for recognition and dreams of becoming the Hokage, the leader of his village. The story is in two parts, the first set in Naruto's pre-teen years, and the second in his teens. The series is based on two one-shot manga by Kishimoto: Karakuri</p>
 		</div>
-		</div>
+		</div> -->
 <div class="videoshere"  >
 <div class="grid-container" style="overflow-y:auto">
     <div class="row1">
@@ -121,11 +232,31 @@
         </div>
             </div>
 </div>
+
+            <div class="xtra">
+                <p>
+
+                </p>
+    </div>
 </div>
 
+        </div>
+	</div>
 
-	</div>
-	</div>
-	</div>
+<script>
+function w3_open() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.width = "15%";
+    document.getElementById("mySidebar").style.display = "block";
+    
+}
+function w3_close() {
+    document.getElementById("main").style.marginLeft = "-15%";
+    document.getElementById("mySidebar").style.display = "none";
+    
+}
+</script>
+
+
 </body>
 </html>
