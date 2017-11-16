@@ -54,7 +54,7 @@
   /*display: inline-block;*/
   float: right;
   right: 0;
-  overflow-y: scroll;
+  overflow-y : scroll;
   position: inherit;
   text-align: center;
   top: 70px;
@@ -73,11 +73,11 @@
   text-align: center;
 }
 .sr{
-  width: 100%;
+  width: 85%;
   position: fixed;
   background: #3AA3E4;
   height: 40px;
-  left: 0;
+  right: 0;
   top: 70;
   color: #ffffff;
   font-weight: bold;
@@ -352,13 +352,13 @@ hr {
     display: inline-block;
     vertical-align: text-bottom;
 }
-#sname{
+.sname{
   line-height: 2px;
   font-family: 'Kalam', cursive;
   font-weight: bolder;
   font-size: 24px;
 }
-#aname{
+.aname{
   line-height: 2px;
   font-family: 'Kalam', cursive;
   font-size: 16px;

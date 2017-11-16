@@ -1,56 +1,22 @@
-
-import MySQLdb
-
-# Open database connection
-db = MySQLdb.connect("localhost","root","prashant","video_management" )
-
-# prepare a cursor object using cursor() method
-cursor = db.cursor()
-
-sql = "SELECT * FROM VIDEO"
-try:
-   # Execute the SQL command
-   cursor.execute(sql)
-   # Fetch all the rows in a list of lists.
-   results = cursor.fetchall()
-   for row in results:
-      id=row[0]
-      print(id)
-except:
-   print("Error: unable to fecth data")
-
-# disconnect from server
-db.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import bs4 as bs
 import numpy as np
 import urllib.request
+import requests
 from nltk import word_tokenize
 from collections import Counter
 url=input("Enter the url : ")
 tokens=[]
-sauce=urllib.request.urlopen(url).read()
-soup=bs.BeautifulSoup(sauce,'lxml')
-for para in soup.find_all('p'):
-    l= para.text
-    tokens += word_tokenize(l)
+st =[]
+#sauce=urllib.request.urlopen(url).read()
+try:
+    sauce = urllib.request.urlopen(url).read()
+    soup=bs.BeautifulSoup(sauce,'lxml')
+    st = soup.find_all('a', href = True)
+    for para in soup.find_all('p'):
+        l= para.text
+        tokens += word_tokenize(l)
+except urllib.error.URLError as e:
+      print(e.reason)
 a=Counter(tokens)
 final_tokens={}
 invertedindex=[]
@@ -70,7 +36,7 @@ for i in token:
     k[len(visited_list)+1]=a.get(i)
     invertedindex[j]=k
 frontier_list = []
-for link in soup.find_all('a', href=True):
+for link in st:
     s=link.get('href')
     if s.startswith('http'):
         if s not in frontier_list:
@@ -114,7 +80,7 @@ while frontier_list:
                     if s not in frontier_list and s not in visited_list:
                         frontier_list.append(s)
         break 
-    if len(visited_list)>5:
+    if len(visited_list)>20:
        break
 #print(final_tokens)
 f=open("inverted.txt","w")

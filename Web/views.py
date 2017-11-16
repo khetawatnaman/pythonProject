@@ -60,8 +60,8 @@ def search(request):
                 local.append(a[i][0])
                 local.append(a[i][4])
                 image.append(local)
-        n = range(len(a))
-        return render(request, 'Search Results.html', {'n':n,'image':image})
+        n = range(4)
+        return render(request, 'Search Results.html', {'n':n,'image':image,'search':search})
 
 def home(request):
     a = list(Video.objects.all().values_list())
@@ -75,17 +75,13 @@ def home(request):
     n = range(len(a))
     return render(request, 'home.html', {'n':n,'image': image})
 
-def videoviewing(request):
 
-    a = ""
+def videoviewing(request):
+    a="static/videos/movie.mp4"
     if request.method == "POST":
-        posted_title=request.POST['query']
-        # a = list(Video.objects.filter(title=posted_title).values_list('video_url',flat=True))[0]
-        #if posted_title== None:
-        #    a="static/videos/as.mp4"
-    n = range(10)
-    return render(request, 'Video Viewing.html')
-    # return render(request, 'Video Viewing.html', {'a':a,'n':n,'posted_title':posted_title})
+        t =  ""
+    n = range(5)
+    return render(request, 'Video Viewing.html', {'a':a,'n':n})
 
 def about(request):
     return render(request, 'About.html', context=None)

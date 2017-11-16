@@ -95,17 +95,26 @@ register = Library()
         </div>
 	</div>
 	<div>
+
         <div class="searchresults">
 {% for i,j,k in image %}
-            <div class="row">
-            <div class="video"><img src={{i}}></div>
+
+            <form action="/videoviewing" method="post">
+                {% csrf_token %}
+             <div class="row" style="padding : 100px">
+                 <button type="submit">
+            <div class="video"><img src={{i}}></div></button>
             <div class="descr">
-            <p id="sname">Shape Of You</p>
-            <p id="aname">Ed Sheeran</p>
+            <p class="sname" id={{j}}>{{j}}</p>
+            <p class="aname">{{k}} Views</p>
             </div>
+
         </div>
+            </form>
+
 {% endfor %}
 
+        </div>
 
 
 	</div>
