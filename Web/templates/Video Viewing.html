@@ -25,8 +25,13 @@ $(document).ready(function() {
 });
 
 </script>
+<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+      <!--&lt;!&ndash;Import materialize.css&ndash;&gt;-->
+      <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>-->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--&lt;!&ndash;Let browser know website is optimized for mobile&ndash;&gt;-->
+      <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
 	<link rel="stylesheet" type="text/css" href="static/css/videoviewing.css">
 	<style>
@@ -37,6 +42,7 @@ $(document).ready(function() {
   padding-bottom: 40px;
   margin-left: 50px;
   margin-right: 20px;
+  margin-top: 50px;
   float:left;
   width: 800px;
   height: 100%;
@@ -95,7 +101,6 @@ float:left;
 font-size:20px;
 padding-left:30px;
 padding-right:30px;
-background: #E0E0E0;
 }
 .dislike{
 float:right;
@@ -238,16 +243,16 @@ padding-right:30px;
 
 	<div class="menu">
 		<ul>
-	  		<li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
-	 		<li><a href="" class="w3-bar-item w3-button" onclick="change()">My Channel</a></li>
+	  		<li><a href="/home" class="w3-bar-item w3-button">Home</a></li>
+	 		<li><a href="/channel" class="w3-bar-item w3-button">My Channel</a></li>
 	  		<li><a href="#liked" class="w3-bar-item w3-button">Liked</a></li>
 		</ul>
 		<hr class="ab">
 		<ul>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Punjabi</a></li>
-	  		<li><a href="#admin" class="w3-bar-item w3-button">Admin's Playlist</a></li>
-	  		<li><a href="\" class="w3-bar-item w3-button">Logout</a></li>
+	  		<li><a href="/bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
+	  		<li><a href="/punjabi" class="w3-bar-item w3-button">Punjabi</a></li>
+	  		<li><a href="/hollywood" class="w3-bar-item w3-button">Hollywood</a></li>
+            <li><a href="/about" class="w3-bar-item w3-button">About</a></li>
 		</ul>
 	</div>
     </div>
@@ -255,55 +260,66 @@ padding-right:30px;
 	<div id="main">
 	    <div id="f1" class="f1">
 		<video id = "v1" width="800px" height="400px">
-		<source src={{a}} type="video/mp4">
+		<source src={{video}} type="video/mp4">
 		<!--<source src="2.webm" type="video/webm">-->
 	    </video>
-		<h4 align="left">{{po}}</h4>
-		<h4 align="left">Duration </h4>
-		<h4 align="left">Description </h4>
+		<h4 align="left">{{t}}</h4>
+		<h4 align="left">{{dur}}</h4>
+		<h4 align="left">{{des}}</h4>
            <div class="views">
-           <h4>Views </h4>
+           <h4>{{views}} Views</h4>
            </div>
            <div class="likeordislike">
 <div class="like">
 <i id = "like" class="fa fa-thumbs-up" type = "button" onclick="likecount()"></i>
     <p id = "count_like">
-        15
+        {{like}}
     </p>
 </div>
 <div class="dislike">
-<i id = "dislike" class="fa fa-thumbs-down" type = "button" onclick="dislikecount()"></i>
+<i id = "dislike" class="fa fa-thumbs-down" type = "submit" onclick="dislikecount()" ></i>
 <p id = "count_dislike">
-        15
-    </p>
+        {{dislike}}
+</p>
 </div>
 </div>
 
         </div>
 		<div id="f2" class="f2">
 		<h4 align="left">Related Videos </h4>
-            {% for i in n %}
-            <div class="i1">
-                <button id="close-image" type="submit"><a href="/videoviewing">
-                    <img id = "ab" src="static/images/minar.jpg" width="80" height="100">
-                </a>
-                </button>
-            </div>
-            <div class="i2">
-                <h6 id="query" name="query" type="text">
-                    Title
-                </h6>
-                <h6>
-                    Channel
-                </h6>
-                <h6>
-                    Views
-                </h6>
-            </div>
+            {% for i,j,k in related %}
+            <div class="col s12 m7">
+    <a href="/videoviewing">
+        <form action="/videoviewing" method="post">
+            {% csrf_token %}
+            <div class="card horizontal" style="height:100px;width:350px">
+      <div class="card-image" style="height:100px;width:150px;float:left">
+          <button type="submit">
+        <img src={{i}} height="100px" width="150px">
+              </button>
+      </div>
+        <div class="card-content" style="margin-left:160px;margin-top:30px">
+          <h6>{{j}}</h6>
+            <input type="hidden" value="{{j}}" name="abc">
+		  <h6>{{k}} Views</h6>
+        </div>
+    </div>
+        </form>
+
+	</a>
+  </div>
             {% endfor %}
+
+
+
+
         </div>
 	</div>
     </div>
+
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+      <!--<script type="text/javascript" src="static/js/materialize.min.js"></script>-->
+
     <script type="text/javascript">
 function w3_open() {
 
@@ -371,30 +387,6 @@ function dislikecount() {
 	document.getElementById("count_dislike").innerHTML=a;
 	dislike_state=1;
     }
-}
-function change(){
-var b = "{{ a }}";
-var vi=document.getElementById("v1");
-vi.src=b;
-vi.load();
-vi.play();
-}
-function change1(){
-var b = "{{ a }}";
-var vi=document.getElementById("ab");
-vi.src=static/images/prashant.jpg;
-}
-
-function postdata(){
-var dataString = document.getElementById("query").innerHTML;
-$.ajax({
-type: "post",
-url: "/videoviewing",
-data: dataString,
-success: function(data){
-$("#"+type).html(data);
-}
-});
 }
 
 </script>

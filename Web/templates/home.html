@@ -128,53 +128,80 @@ register = Library()
 		</ul>
 		<hr class="ab">
 		<ul>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Punjabi</a></li>
-	  		<li><a href="#admin" class="w3-bar-item w3-button">Hollywood</a></li>
+	  		<li><a href="/bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
+	  		<li><a href="/punjabi" class="w3-bar-item w3-button">Punjabi</a></li>
+	  		<li><a href="/hollywood" class="w3-bar-item w3-button">Hollywood</a></li>
             <li><a href="/about" class="w3-bar-item w3-button">About</a></li>
 
 		</ul>
 	</div>
 	</div>
 
-
-
-
-
-        <div id="main">
+    <div id="main">
 	<div class="home">
         <br>
         <br>
 		<h2 id="trending">Trending</h2>
 		<div class="trending">
-		{% for i,j,k in image %}
+		{% for i,j,k in trending %}
                 <a href="/videoviewing"><div class="item">
                     <form action="/videoviewing" method="post">
                         {% csrf_token %}
                     <button type="submit">
                         <img src={{i}}>
                     </button>
-                <div class ="item-name">{{j}}</div>
+                <div class ="item-name">{{j}}<input type="hidden" value="{{j}}" name="abc"></div>
 				<div class ="item-album">{{k}} Views</div>
                   </form>
-			</div></a>
+				</div></a>
 
 			{% endfor %}
 					</div>
 		<h2 id="genre">Genre</h2>
-		<a href="#viewVideo"><div class="genre">
-					{% for i in n %}
-			<div class="item"></div>
+		<div class="genre">
+			<a href="/rock"><div class="item" >
+				<img src="static\images\rock.jpg">
+			</div></a>
+			<a href="/blues"><div class="item" >
+				<img src="static\images\blues.jpg">
+			</div></a>
+			<a href="/pop"><div class="item" >
+				<img src="static\images\pop.jpg">
+			</div></a>
+			<a href="/edm"><div class="item" >
+				<img src="static\images\edm.jpg">
+			</div></a>
+			<a href="/classical"><div class="item" >
+				<img src="static\images\classical.jpg">
+			</div></a>
+			<a href="/hiphop"><div class="item" >
+				<img src="static\images\hiphop.jpg">
+			</div></a>
+			<a href="/rap"><div class="item" >
+				<img src="static\images\rap.jpg">
+			</div></a>
+			<a href="/rnb"><div class="item" >
+				<img src="static\images\rnb.jpg">
+			</div></a>
+		</div>
 
-			{% endfor %}
-		</div></a>
+
 		<h2 id="new">New Uploads</h2>
 		<div class="new">
-					{% for i in n %}
-			<a href="#viewVideo"><div class="item"></div></a>
+		{% for i,j,k in new %}
+                <a href="/videoviewing"><div class="item">
+                    <form action="/videoviewing" method="post">
+                        {% csrf_token %}
+                    <button type="submit">
+                        <img src={{i}}>
+                    </button>
+                <div class ="item-name">{{j}}<input type="hidden" value="{{j}}" name="abc"></div>
+				<div class ="item-album">{{k}} Views</div>
+                  </form>
+				</div></a>
 
 			{% endfor %}
-		</div>
+					</div>
 	</div>
         </div>
 
@@ -193,6 +220,7 @@ function w3_close() {
 
 function signOut() {
   $(location).attr('href', '/')
+window.location = "https://mail.google.com/mail/u/0/?logout&hl=en";
   console.log("sign out")
     	var auth2 = gapi.auth2.getAuthInstance();
     		auth2.signOut().then(function () {

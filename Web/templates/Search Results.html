@@ -71,16 +71,16 @@ register = Library()
 	<div class="menu">
 
 		<ul>
-	  		<li><a href="#home" class="w3-bar-item w3-button">Home</a></li>
-	 		<li><a href="#mychannel" class="w3-bar-item w3-button">My Channel</a></li>
+	  		<li><a href="/home" class="w3-bar-item w3-button">Home</a></li>
+	 		<li><a href="/channel" class="w3-bar-item w3-button">My Channel</a></li>
 	  		<li><a href="#liked" class="w3-bar-item w3-button">Liked</a></li>
 		</ul>
 		<hr class="ab">
 		<ul>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
-	  		<li><a href="#bollywood" class="w3-bar-item w3-button">Punjabi</a></li>
-	  		<li><a href="#admin" class="w3-bar-item w3-button">Admin's Playlist</a></li>
-	  		<li><a href="http://127.0.0.1:8000" class="w3-bar-item w3-button">Logout</a></li>
+	  		<li><a href="/bollywood" class="w3-bar-item w3-button">Bollywood</a></li>
+	  		<li><a href="/punjabi" class="w3-bar-item w3-button">Punjabi</a></li>
+	  		<li><a href="/hollywood" class="w3-bar-item w3-button">Hollywood</a></li>
+			<li><a href="/about" class="w3-bar-item w3-button">About</a></li>
 		</ul>
 	</div>
 	</div>
@@ -105,7 +105,9 @@ register = Library()
                  <button type="submit">
             <div class="video"><img src={{i}}></div></button>
             <div class="descr">
-            <p class="sname" id={{j}}>{{j}}</p>
+            <p class="sname" id={{j}}>
+                {{j}}
+                <input type="hidden" value="{{j}}" name="abc"></p>
             <p class="aname">{{k}} Views</p>
             </div>
 

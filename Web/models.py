@@ -18,6 +18,7 @@ class Video(models.Model):
     image_url = models.TextField(default="null")
     created_at = models.DateTimeField(default=datetime.now, blank=True)
     duration=models.TextField(default="02:30")
+    genre = models.TextField(default="null")
 
     class Meta:
         db_table = "video"
